@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 16px;
+}
+
+
+.page-content {
+    display: flex;
+}
+
+
+/* ________________________________
+_____________Sidebar______________
+________________________________*/
+.sidebar {
+    width: 20vw;
+    height: 100vh;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+
+    background-color: #3B78BA;
+    color: white;
+
+    box-shadow: 0 1px 3px 0 rgb(11, 30, 49);
+}
+
+.sidebar-header-img {
+    width: 10rem;
+}
+
+.sidebar-links {
+    margin-top: 2rem;
+}
+
+.sidebar-link:not(:last-of-type) {
+    font-weight: 300;
+}
+
+.sidebar-link:not(:first-of-type) {
+    margin-top: 1rem;
+}
+
+
+.sidebar-profile {
+    margin-top: 2rem;
+}
+
+.sidebar-profile-username {
+    text-align: center;
+}
+
+.sidebar-profile-type {
+    font-weight: 300;
+    font-size: .8rem;
+    text-align: center;
+}
+
+.sidebar-profile-logout {
+    margin-top: 2rem;
+}
+
+/* ________________________________
+___________Main Content____________ 
+________________________________*/
+
+.main-content-header {
+    background-color: #4F5467;
+    color: white;
+    padding: 1.5rem 2rem;
+    display: flex;
+}
+    .content-header-greeting{
+        font-weight: 300;
+    }
+        .greeting-name{
+            font-weight: 500;
+        }
+    .content-header-logout-btn {
+        margin-left: 1rem;
+    }
+
+
+.main-content-body {
+    padding-left: 2rem;
+
+
+    display: flex;
+}
+.content-main{
+    margin-right: 2rem;
+}
+.announcement {
+    border: 1px solid rgba(10, 32, 54, 0.095);
+    border-radius: 2px;
+    margin-bottom: 1rem;
+    padding: .5rem;
+}
+    .announcement-body {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+    .announcement-date {
+        font-size: .8rem;
+        font-weight: 300;
+
+}
+
+/* ________________________________
+_____________Calendar_____________ 
+________________________________*/
+.calendar-section {
+    width: 40vw;
+    height: max-content;
+    box-sizing: border-box;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+
+
+}
+
+.calendar-section-time-widget {
+    background: #dd3333;
+    color: white;
+    border-radius: 2px;
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+}
+    .time-widget-time{
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 300;
+    }
+    .time-widget-date{
+        text-align: center;
+        font-weight: 300;
+    }
+.calendar-section-events {
+    padding: 1.5rem 1rem;
+    margin-top: 1rem;
+    background: #dd3333;
+    border-radius: 2px;
+    color: white;
+}
+    .calendar-section-events-header{
+        font-weight: bold;
+        font-size: 1.25rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    .event{
+        display: flex;
+        width: 100%;
+        margin-top: .75rem;
+    }
+    .event-date{
+        width: 3rem;
+        margin-right: .5rem;
+        font-size: .9rem;
+        font-weight: 300;
+        border-right: 1px solid white;;
+    }
+    .event-detail{
+        font-size: .9rem;
+        font-weight: bold;
+    }

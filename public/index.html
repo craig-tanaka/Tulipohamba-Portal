@@ -17,80 +17,8 @@
   <!-- initialize the SDK after all desired features are loaded -->
   <script defer src="/__/firebase/init.js"></script>
 
-  <style media="screen">
-    body {
-      background: #eceff1;
-      color: rgba(0, 0, 0, 0.87);
-      font-family: Roboto, Helvetica, Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    #message {
-      background: white;
-      max-width: 360px;
-      margin: 100px auto 16px;
-      padding: 32px 24px;
-      border-radius: 3px;
-    }
-
-    #message h2 {
-      color: #ffa100;
-      font-weight: bold;
-      font-size: 16px;
-      margin: 0 0 8px;
-    }
-
-    #message h1 {
-      font-size: 22px;
-      font-weight: 300;
-      color: rgba(0, 0, 0, 0.6);
-      margin: 0 0 16px;
-    }
-
-    #message p {
-      line-height: 140%;
-      margin: 16px 0 24px;
-      font-size: 14px;
-    }
-
-    #message a {
-      display: block;
-      text-align: center;
-      background: #039be5;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: white;
-      padding: 16px;
-      border-radius: 4px;
-    }
-
-    #message,
-    #message a {
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.24);
-    }
-
-    #load {
-      color: rgba(0, 0, 0, 0.4);
-      text-align: center;
-      font-size: 13px;
-    }
-
-    @media (max-width: 600px) {
-
-      body,
-      #message {
-        margin-top: 0;
-        background: white;
-        box-shadow: none;
-      }
-
-      body {
-        border-top: 16px solid #ffa100;
-      }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -98,20 +26,112 @@
   <div class="page-content">
     <section class="sidebar">
       <div class="sidebar-header">
-
+        <img src="./img/logo-white.png" alt="Tulipohamba Training & Assessment Institute" class="sidebar-header-img">
       </div>
       <nav class="sidebar-links">
-
+        <div class="sidebar-link">Announcements</div>
+        <div class="sidebar-link">Calendar</div>
+        <div class="sidebar-link">My Modules</div>
+        <div class="sidebar-link">Academic Record</div>
+        <div class="sidebar-link">Student E-learning</div>
       </nav>
-      <div class="sidebar-footer">
-
+      <div class="sidebar-profile">
+        <div class="sidebar-profile-username">Craig Mudzingwa</div>
+        <div class="sidebar-profile-type">Student</div>
+        <div class="sidebar-profile-logout">Logout</div>
       </div>
     </section>
     <section class="main-content">
 
-    </section>
-    <section class="calendar-section">
+      <div class="main-content-header">
+        <div class="content-header-greeting">
+          Hey, <span class="greeting-name">Craig T. Mudzingwa</span>
+        </div>
+        <div class="content-header-logout-btn">
+          Logout
+        </div>
+      </div>
 
+      <div class="main-content-body">
+        <main class="content-main">
+          <h1>Dashboard</h1>
+          <div class="announcements">
+            <div class="announcement">
+              <h3>Basic Life Support Services</h3>
+              <p class="announcement-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente accusamus
+                corporis eveniet, saepe nisi
+                et ducimus est mollitia doloremque at. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                tempore!</p>
+              <div class="announcement-date">2 weeks Ago</div>
+            </div>
+            <div class="announcement">
+              <h3>Basic Life Support Services</h3>
+              <p class="announcement-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente accusamus
+                corporis eveniet, saepe nisi
+                et ducimus est mollitia doloremque at. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                tempore!</p>
+              <div class="announcement-date">2 weeks Ago</div>
+            </div>
+            <div class="announcement">
+              <h3>Basic Life Support Services</h3>
+              <p class="announcement-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente accusamus
+                corporis eveniet, saepe nisi
+                et ducimus est mollitia doloremque at. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                tempore!</p>
+              <div class="announcement-date">2 weeks Ago</div>
+            </div>
+            <div class="announcement">
+              <h3>Basic Life Support Services</h3>
+              <p class="announcement-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente accusamus
+                corporis eveniet, saepe nisi
+                et ducimus est mollitia doloremque at. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                tempore!</p>
+              <div class="announcement-date">2 weeks Ago</div>
+            </div>
+            <div class="announcement">
+              <h3>Basic Life Support Services</h3>
+              <p class="announcement-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente accusamus
+                corporis
+                eveniet, saepe nisi
+                et ducimus est mollitia doloremque at. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                tempore!</p>
+              <div class="announcement-date">2 weeks Ago</div>
+            </div>
+          </div>
+        </main>
+
+        <div class="calendar-section">
+          <div class="calendar-section-time-widget">
+            <div class="time-widget-time">21 : 51</div>
+            <div class="time-widget-date">Wednesday, June 3, 2020</div>
+          </div>
+
+          <div class="calendar-section-events">
+            <div class="calendar-section-events-header">Upcoming Events</div>
+
+            <div class="calendar-section-event-body">
+              <div class="event">
+                <div class="event-date">15 Jun</div>
+                <div class="event-detail">Annual PTA Meeting</div>
+              </div>
+              <div class="event">
+                <div class="event-date">21 Jun</div>
+                <div class="event-detail">BLS Conference</div>
+              </div>
+              <div class="event">
+                <div class="event-date">24 Jun</div>
+                <div class="event-detail">Online Assestments</div>
+              </div>
+              <div class="event">
+                <div class="event-date">2 Jul</div>
+                <div class="event-detail">End of Semester</div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
     </section>
   </div>
 

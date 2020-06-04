@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Welcome to Firebase Hosting</title>
+  <title>Tulipohamba Training Institute Portal | SignIn</title>
 
   <!-- update the version number as needed -->
   <script defer src="/__/firebase/7.14.6/firebase-app.js"></script>
@@ -16,124 +16,27 @@
   <script defer src="/__/firebase/7.14.6/firebase-storage.js"></script>
   <!-- initialize the SDK after all desired features are loaded -->
   <script defer src="/__/firebase/init.js"></script>
+  <script defer src="./js/index.js"></script>
 
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
   <div class="page-content">
-    <section class="sidebar">
-      <div class="sidebar-header">
-        <img src="./img/logo icon white.png" alt="Tulipohamba Training & Assessment Institute" class="sidebar-header-img">
-        <div class="site-title">Tulipohamba</div>
-        <div class="site-subtitle">Training & Assestment Institute</div>
-      </div>
-      <nav class="sidebar-links">
-        <div class="sidebar-link">
-          <img src="./img/announcements-vector.png" class="sidebar-link-img">
-          <a href="">Announcements</a>
+    <img src="./img/signin-img.jpg" alt="" class="signin-side-img">
+    <section class="signin-main-section">
+      <main class="signin-main-content">
+        <img src="./img/logo.png" alt="Tulipohamba Training & Assessment Institute" class="signin-brand-img">
+        <div class="signin-header">Tulipohamba Portal</div>
+        <input type="text" placeholder="Username" class="signin-input">
+        <input type="password" placeholder="Password" class="signin-input">
+        <div class="signin-btn-container">
+          <button class="signin-btn">Signin</button>
         </div>
-        <div class="sidebar-link">Calendar</div>
-        <div class="sidebar-link">My Modules</div>
-        <div class="sidebar-link">Academic Record</div>
-        <div class="sidebar-link">Student E-learning</div>
-      </nav>
-    </section>
-    <section class="main-content">
-
-      <div class="main-content-header">
-        <div class="content-header-greeting">
-          Hey, <span class="greeting-name">Craig T. Mudzingwa</span>
-        </div>
-        <div class="content-header-logout-btn">
-          <img src="img/logout vector.png" alt="" class="header-logout-vector">
-          <span>Logout</span>
-        </div>
-      </div>
-
-      <div class="main-content-body">
-        <main class="content-main">
-          <img src="./img/header img.jpg" alt="" class="main-content-bofy-img">
-          <h1>Dashboard</h1>
-          <div class="announcements">
-            <div class="announcement">
-              <h3>Basic Life Support Services</h3>
-              <p class="announcement-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente accusamus
-                corporis eveniet, saepe nisi
-                et ducimus est mollitia doloremque at. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab,
-                tempore!</p>
-              <div class="announcement-date">2 weeks Ago</div>
-            </div>
-            <div class="announcement">
-              <h3>Basic Life Support Services</h3>
-              <p class="announcement-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente accusamus
-                corporis eveniet, saepe nisi
-                et ducimus est mollitia doloremque at. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab,
-                tempore!</p>
-              <div class="announcement-date">2 weeks Ago</div>
-            </div>
-            <div class="announcement">
-              <h3>Basic Life Support Services</h3>
-              <p class="announcement-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente accusamus
-                corporis eveniet, saepe nisi
-                et ducimus est mollitia doloremque at. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab,
-                tempore!</p>
-              <div class="announcement-date">2 weeks Ago</div>
-            </div>
-            <div class="announcement">
-              <h3>Basic Life Support Services</h3>
-              <p class="announcement-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente accusamus
-                corporis eveniet, saepe nisi
-                et ducimus est mollitia doloremque at. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab,
-                tempore!</p>
-              <div class="announcement-date">2 weeks Ago</div>
-            </div>
-            <div class="announcement">
-              <h3>Basic Life Support Services</h3>
-              <p class="announcement-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente accusamus
-                corporis
-                eveniet, saepe nisi
-                et ducimus est mollitia doloremque at. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab,
-                tempore!</p>
-              <div class="announcement-date">2 weeks Ago</div>
-            </div>
-          </div>
-        </main>
-
-        <div class="calendar-section">
-          <div class="calendar-section-time-widget">
-            <div class="time-widget-time">21 : 51</div>
-            <div class="time-widget-date">Wednesday, June 3, 2020</div>
-          </div>
-
-          <div class="calendar-section-events">
-            <div class="calendar-section-events-header">Upcoming Events</div>
-
-            <div class="calendar-section-event-body">
-              <div class="event">
-                <div class="event-date">15 Jun</div>
-                <div class="event-detail">Annual PTA Meeting</div>
-              </div>
-              <div class="event">
-                <div class="event-date">21 Jun</div>
-                <div class="event-detail">BLS Conference</div>
-              </div>
-              <div class="event">
-                <div class="event-date">24 Jun</div>
-                <div class="event-detail">Online Assestments</div>
-              </div>
-              <div class="event">
-                <div class="event-date">2 Jul</div>
-                <div class="event-detail">End of Semester</div>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-      </div>
+      </main>
     </section>
   </div>
 

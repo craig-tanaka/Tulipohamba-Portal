@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tulipohamba Training Portal</title>
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/7.14.6/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/7.14.6/firebase-auth.js"></script>
+  <script defer src="/__/firebase/7.14.6/firebase-database.js"></script>
+  <script defer src="/__/firebase/7.14.6/firebase-firestore.js"></script>
+  <script defer src="/__/firebase/7.14.6/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/7.14.6/firebase-storage.js"></script>
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script defer src="/__/firebase/init.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="page-content">
+    <section class="sidebar">
+      <div class="sidebar-header">
+        <img src="./img/logo icon white.png" alt="Tulipohamba Training & Assessment Institute"
+          class="sidebar-header-img">
+        <div class="site-title">Tulipohamba</div>
+        <div class="site-subtitle">Training & Assestment Institute</div>
+      </div>
+      <nav class="sidebar-links">
+        <div class="sidebar-link">
+          <img src="./img/announcements-vector.png" class="sidebar-link-img">
+          <a href="">Announcements</a>
+        </div>
+        <div class="sidebar-link">
+          <img src="./img/modules-vector.png" class="sidebar-link-img">
+          <a href="">My Modules</a>
+        </div>
+        <div class="sidebar-link">
+          <img src="./img/calendar-vector.png" class="sidebar-link-img">
+          <a href="">Calendar</a>
+        </div>
+        <div class="sidebar-link">
+          <img src="./img/academic-record-vector.png" class="sidebar-link-img">
+          <a href="">Academic Record</a>
+        </div>
+        <div class="sidebar-link">
+          <img src="./img/elearning.png" class="sidebar-link-img">
+          <a href="">Student E-learning</a>
+        </div>
+        <div class="sidebar-link">
+          <img src="./img/users-vector.png" class="sidebar-link-img">
+          <a href="">Users</a>
+        </div>
+      </nav>
+    </section>
+    <section class="main-content">
+
+      <div class="main-content-header">
+        <div class="content-header-greeting">
+          Hey, <span class="greeting-name">Student 1</span>
+        </div>
+        <div class="content-header-logout-btn">
+          <img src="img/logout vector.png" alt="" class="header-logout-vector">
+          <span>Logout</span>
+        </div>
+      </div>
+
+      <div class="main-content-body">
+        <main class="content-main">
+          <img src="./img/header img.jpg" alt="" class="main-content-body-img">
+          <h1>Dashboard</h1>
+          <div class="announcements">
+            <div class="announcement">
+              <div class="announcement-title">Basic Life Support Services</div>
+              <p class="announcement-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente accusamus
+                corporis eveniet, saepe nisi
+                et ducimus est mollitia doloremque at. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                tempore!</p>
+              <div class="announcement-date">2 weeks Ago</div>
+            </div>
+            <div class="announcement">
+              <div class="announcement-title">English 101 - Test 2 date</div>
+              <p class="announcement-body poll">
+                Unfortunately due to to the staff meeting our test scheduled for this afternoon has been postponed, The
+                only slots I have available to move this are folowing...
+              </p>
+
+
+              <input type="radio" name="poll-1" value="Tuesday 4pm">
+              <label for="m">Tuesday 4pm</label><br>
+              <input type="radio" name="poll-1" value="Wednesday 730am">
+              <label for="female">Wednesday 730am</label><br>
+              <input type="radio" name="poll-1" value="Comfortable with any">
+              <label for="other">Comfortable with any</label><br>
+              <input type="submit" value="Submit">
+
+
+              <div class="announcement-date">2 weeks Ago</div>
+            </div>
+            <div class="announcement">
+              <div class="announcement-title">Basic Life Support Services</div>
+              <p class="announcement-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente accusamus
+                corporis eveniet, saepe nisi
+                et ducimus est mollitia doloremque at. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                tempore!
+              </p>
+              <label for="file">Downloading progress:</label>
+              <progress id="file" value="32" max="100"> 32% </progress>
+              <div class="announcement-date">2 weeks Ago</div>
+            </div>
+            <div class="announcement">
+              <div class="announcement-title">Basic Life Support Services</div>
+              <p class="announcement-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente accusamus
+                corporis eveniet, saepe nisi
+                et ducimus est mollitia doloremque at. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                tempore!</p>
+              <div class="announcement-date">2 weeks Ago</div>
+            </div>
+            <div class="announcement">
+              <div class="announcement-title">Basic Life Support Services</div>
+              <p class="announcement-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente accusamus
+                corporis
+                eveniet, saepe nisi
+                et ducimus est mollitia doloremque at. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                tempore!</p>
+              <div class="announcement-date">2 weeks Ago</div>
+            </div>
+          </div>
+        </main>
+
+        <div class="calendar-section">
+          <div class="calendar-section-time-widget">
+            <div class="time-widget-time">21 : 51</div>
+            <div class="time-widget-date">Wednesday, June 3, 2020</div>
+          </div>
+
+          <div class="calendar-section-events">
+            <div class="calendar-section-events-header">Upcoming Events</div>
+            <div class="calendar-section-event-body">
+              <div class="event">
+                <div class="event-date">15 Jun</div>
+                <div class="event-detail">Annual PTA Meeting</div>
+              </div>
+              <div class="event">
+                <div class="event-date">21 Jun</div>
+                <div class="event-detail">BLS Conference</div>
+              </div>
+              <div class="event">
+                <div class="event-date">24 Jun</div>
+                <div class="event-detail">Online Assestments</div>
+              </div>
+              <div class="event">
+                <div class="event-date">2 Jul</div>
+                <div class="event-detail">End of Semester</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="online-users-wdiget">
+            <div class="online-users-widget-title">
+              No of Online Users:
+              <span class="online-users-count">25</span>
+            </div>
+            <div class="widget-graph">
+              <div class="staff-bar"></div>
+              <div class="students-bar"></div>
+            </div>
+            <div class="widget-graph-legend">
+              <div class="legend-item">
+                <div class="legend-item-color"></div>
+                <div>Staff</div>
+              </div>
+              <div class="legend-item">
+                <div class="legend-item-color students"></div>
+                <div>Students</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+      // // The Firebase SDK is initialized and available here!
+      //
+      // firebase.auth().onAuthStateChanged(user => { });
+      // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+      // firebase.messaging().requestPermission().then(() => { });
+      // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+      //
+      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+      try {
+        let app = firebase.app();
+        let features = [
+          "auth",
+          "database",
+          "firestore",
+          "messaging",
+          "storage"
+        ].filter((feature) => typeof app[feature] === "function");
+        console.log(`Firebase SDK loaded with ${features.join(", ")}`);
+      } catch (e) {
+        console.error(e);
+      }
+    });
+  </script>
+</body>
+
+</html>

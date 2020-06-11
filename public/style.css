@@ -38,7 +38,7 @@ ________________________________*/
 .signin-side-img {
     width: 50%;
     height: 100vh;
-    /* object-fit: cover; */
+    object-fit: cover;
     /* overflow: hidden; */
 }
 .signin-main-section{
@@ -96,6 +96,16 @@ ________________________________*/
             border: 1px solid #1b5280 ;
         }
 
+
+@media(max-width: 969px){
+    .signin-side-img {
+        display: none;
+    }
+    .signin-main-section {
+        width: 100%;
+    }
+}
+
 /* ________________________________
 _____________Sidebar______________
 ________________________________*/
@@ -110,6 +120,18 @@ ________________________________*/
 
     box-shadow: 0 1px 3px 0 rgb(11, 30, 49);
 }
+.sidebar-overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #2863978f;
+
+    display: none;
+}
+    .sidebar-overlay.active{
+        display: initial;
+    }
 
 .sidebar-header-img {
     width: 10rem;
@@ -151,6 +173,24 @@ ________________________________*/
         margin-right: .75rem;
     }
 
+@media(max-width: 969px) {
+    .sidebar {
+        display: none;
+    }
+
+    .sidebar.active{
+        display: initial;
+        position: absolute;
+        width: 17rem;
+    }
+
+}
+@media(max-width: 679px) {
+    .calendar-section {
+        display: none;
+    }
+}
+
 
 /* ________________________________
 ___________Main Content____________ 
@@ -168,6 +208,17 @@ ________________________________*/
     display: flex;
     align-items: center;
 }
+    .sidebar-toggle-btn{
+        background-color: transparent ;
+        padding: 0;
+        margin: 0;
+        display: none;
+    }
+    .sidebar-toggle-btn-img{
+        margin-top: .25rem;
+        width: 1.25rem;
+        padding: .25rem;
+    }
     .content-header-greeting{
         padding: .5rem;
         border-right: 1px solid white;
@@ -225,6 +276,24 @@ ________________________________*/
         font-size: .8rem;
         font-weight: 300;
 
+}
+
+@media(max-width: 969px) {
+    .sidebar-toggle-btn {
+        display: initial;
+        ;
+    }
+
+@media(max-width: 679px) {
+    .main-content-body {
+        padding: 1.5rem;
+    }
+    .content-main {
+        margin-right: 0;
+    }
+    .main-content-body-img {
+        margin-top: 0;
+    }
 }
 
 /* ________________________________

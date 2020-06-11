@@ -5,6 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tulipohamba Training Portal</title>
+  <link rel="icon" type="image/png" href="./img/favicon.png" />
 
   <!-- update the version number as needed -->
   <script defer src="/__/firebase/7.14.6/firebase-app.js"></script>
@@ -16,6 +17,7 @@
   <script defer src="/__/firebase/7.14.6/firebase-storage.js"></script>
   <!-- initialize the SDK after all desired features are loaded -->
   <script defer src="/__/firebase/init.js"></script>
+  <script defer src="./js/home.js"></script>
 
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -24,6 +26,7 @@
 <body>
 
   <div class="page-content">
+    <section class="sidebar-overlay"></section>
     <section class="sidebar">
       <div class="sidebar-header">
         <img src="./img/logo icon white.png" alt="Tulipohamba Training & Assessment Institute"
@@ -61,6 +64,9 @@
     <section class="main-content">
 
       <div class="main-content-header">
+        <button type="button" class="sidebar-toggle-btn">
+          <img class="sidebar-toggle-btn-img" src="./img/hamburger menu.svg" alt="sidebar toggle button">
+        </button>
         <div class="content-header-greeting">
           Hey, <span class="greeting-name">Student 1</span>
         </div>

@@ -110,8 +110,9 @@ ________________________________*/
 _____________Sidebar______________
 ________________________________*/
 .sidebar {
-    width: 20vw;
-    height: 100vh;
+    width: 40rem;
+    min-height: 100vh;
+    height: max-content;
     padding: 2rem 1.5rem;
     box-sizing: border-box;
 
@@ -132,10 +133,24 @@ ________________________________*/
     .sidebar-overlay.active{
         display: initial;
     }
+.sidebar-back-btn-container{
+    text-align: end;
+}
+.sidebar-back-btn {
+    background: none;
+    display: none;
+}
+    .sidebar-back-btn-img {
+        width: 2rem;
+    }
 
+.sidebar-header-img-container{
+    display: flex;
+    justify-content: center;
+}
 .sidebar-header-img {
     width: 10rem;
-    margin-left: 1.5rem;;
+    /* margin-left: 1.5rem;; */
 }
     .site-title{
         text-align: center;
@@ -146,7 +161,7 @@ ________________________________*/
     }
     .site-subtitle{
         text-align: center;
-        font-size: .925rem;
+        font-size: .9rem;
         font-weight: 300;
         margin-top: -.15rem;
     }
@@ -172,6 +187,17 @@ ________________________________*/
         width: 2rem;
         margin-right: .75rem;
     }
+@media(min-width: 969px) and (max-width: 1270px){
+    .sidebar{
+        padding: 1rem;
+    }
+    .site-title{
+        font-size: 1.8rem;
+    }
+    .site-subtitle {
+        font-size: .8rem;
+    }
+}
 
 @media(max-width: 969px) {
     .sidebar {
@@ -191,6 +217,19 @@ ________________________________*/
     }
 }
 
+@media(max-width: 375px){
+    .sidebar-back-btn {
+        display: initial;
+        padding: 0;
+    }
+    .sidebar {
+        padding-top: 1rem;
+    }
+    .sidebar-header {
+        margin-top: 1rem;
+    }
+
+}
 
 /* ________________________________
 ___________Main Content____________ 
@@ -283,6 +322,7 @@ ________________________________*/
         display: initial;
         ;
     }
+}
 
 @media(max-width: 679px) {
     .main-content-body {
@@ -306,8 +346,6 @@ ________________________________*/
     padding: 1rem;
     margin-top: 1rem;
     margin-right: 1rem;
-
-
 }
 
 .calendar-section-time-widget {

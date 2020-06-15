@@ -81,10 +81,20 @@ ________________________________*/
     .signin-input:first-of-type{
         margin-top: 1.5rem;
     }
+    .signin-error-display {
+        text-align: center;
+        margin-top: .5rem;
+        color: red;
+        font-style: italic;
+    }
     .signin-btn-container {
-        margin-top: 1.5rem;
+        margin-top: .5rem;
         display: flex;
         justify-content: center;
+        position: relative;
+    }
+    .signin-btn-container.with-loader{
+        height: 64px;
     }
         .signin-btn{
             cursor: pointer;
@@ -153,6 +163,10 @@ ________________________________*/
         width: 2rem;
     }
 
+.sidebar-header {
+    color: white;
+    text-decoration: none;
+}
 .sidebar-header-img-container{
     display: flex;
     justify-content: center;
@@ -177,8 +191,8 @@ ________________________________*/
 
 
 .sidebar-links {
-    margin-top: 2rem;
-    padding-top: 2rem;
+    margin-top: 1rem;
+    padding-top: 1.5rem;
     border-top: 1px solid white;
 }
     .sidebar-link{

@@ -47,7 +47,7 @@ function addUserSidebarLinks(user) {
     const sidebarLinks = {
         users: `<div class="sidebar-link"> 
                     <img src = "./img/users-vector.png" class="sidebar-link-img">
-                    <a href="">Users</a> 
+                    <a href="../users.html">Users</a> 
                 </div>`,
         studentElearning:   `<div class="sidebar-link">
                                 <img src="./img/elearning.png" class="sidebar-link-img">

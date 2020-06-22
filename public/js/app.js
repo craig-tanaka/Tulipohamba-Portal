@@ -75,5 +75,6 @@ function addUserSidebarLinks(user) {
         sidebarLinksElement.innerHTML += sidebarLinks.announcements;
         sidebarLinksElement.innerHTML += sidebarLinks.calendar;
         sidebarLinksElement.innerHTML += sidebarLinks.users;
+        sidebarLinksElement.innerHTML += sidebarLinks.studentElearning;
     }
 }

@@ -84,17 +84,17 @@
 
               <div class="form-row">
                 <label class="form-label">User First Name :</label>
-                <input placeholder="User First Name :" type="text" class="form-input">
+                <input placeholder="User First Name :" type="text" class="form-input" id="form-first-name"
               </div>
 
               <div class="form-row">
                 <label class="form-label">User Middle Names :</label>
-                <input placeholder="User Middle Names :" type="text" class="form-input">
+                <input placeholder="User Middle Names :" type="text" class="form-input" id="form-middle-names">
               </div>
               
               <div class="form-row">
                 <label class="form-label">User Last Name :</label>
-                <input placeholder="User Last Name :" type="text" class="form-input">
+                <input placeholder="User Last Name :" type="text" class="form-input" id="form-last-name">
               </div>
 
             </fieldset>
@@ -105,7 +105,7 @@
 
               <div class="form-row">
                 <label class="form-label">User Role :</label>
-                <select class="form-select">
+                <select id="form-userrole-select" class="form-select">
                   <option value="Student">Student</option>
                   <option value="Lecturer">Lecturer</option>
                   <option value="Admin">Admin</option>
@@ -114,7 +114,9 @@
 
             </fieldset>
 
-            <input type="submit" value="Create user" class="form-submit">
+
+            <input type="submit" value="Create user" class="form-submit" id="form-submit-btn">
+            <label id="form-error-label" style="display: none;">Highlighted Inputs are required</label>
 
           </form>
       </div>

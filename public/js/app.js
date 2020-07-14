@@ -1,4 +1,5 @@
 const db = firebase.firestore();
+let user;
 
 const sidebar = document.querySelector('section.sidebar');
 const sidebarOverlay = document.querySelector('section.sidebar-overlay');
@@ -7,12 +8,13 @@ const sidebarBackBtn = document.querySelector('.sidebar-back-btn');
 
 
 // Get User Account from firebase Auth
-firebase.auth().onAuthStateChanged(function (user) {
-    if (user) {
+firebase.auth().onAuthStateChanged(function (_user) {
+    if (_user) {
+        user = _user;
         getUserDetails(user);
 
     } else {
-        window.location.replace('../index.html');
+        // window.location.replace('../index.html');
     }
 });
 
@@ -35,11 +37,11 @@ sidebarBackBtn.addEventListener('click', (event) => {
 function getUserDetails(user) {
     db.collection('users').doc(user.uid).get()
         .then(doc => {
-            console.log(doc.data());
             addUserSidebarLinks(doc.data());
         })
         .catch(err => {
-            window.location.reload();
+            console.log(err);
+            // Todo: Alert user or developer of error
         })
 }
 function addUserSidebarLinks(user) {

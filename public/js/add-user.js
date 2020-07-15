@@ -2,6 +2,7 @@ const formSubmitBtn = document.querySelector('#form-submit-btn');
 const formFirstNameInput = document.querySelector('#form-first-name');
 const formMiddleNames = document.querySelector('#form-middle-names');
 const formLastNameInput = document.querySelector('#form-last-name');
+const formEmailInput = document.querySelector('#form-email-input');
 const formUserRoleSelect = document.querySelector('#form-userrole-select');
 const formErrorLabel = document.querySelector('#form-error-label');
 const formSubmitRow = document.querySelector('#form-submit-row');
@@ -30,6 +31,12 @@ function validateForm() {
     // #form-last-name input validation
     if (!formLastNameInput.value) {
         formLastNameInput.style.border = '1px solid red';
+        formHasNoErrors = false;
+    }
+    // #form-email-input input validation
+    if (!formEmailInput.value) {
+        // TODO: improve email validation
+        formEmailInput.style.border = '1px solid red';
         formHasNoErrors = false;
     }
 

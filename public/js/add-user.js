@@ -35,7 +35,7 @@ function validateForm() {
 
     if (formHasNoErrors) {
         toggleLoader()
-        // pushUserDetailsToServer()
+        pushUserDetailsToServer()
     }else {
         formErrorLabel.style.display = 'initial';
     }
@@ -51,6 +51,7 @@ function pushUserDetailsToServer() {
     .then(function(docRef) {
         console.log("Document written with ID: ", docRef.id);
         alert("Document written with");
+        toggleLoader();
         // Todo: inform user job is done and maybe clear form
     })
     .catch(function(error) {
@@ -68,6 +69,8 @@ function toggleLoader() {
             el.style.display = "initial";
         })
         formSubmitRow.style.display = "initial";
+
+        loaderVisible = false;
     }
     else {
         formFieldsets.forEach(el => {
@@ -75,5 +78,7 @@ function toggleLoader() {
         })
         formSubmitRow.style.display = "none";
         formLoaderContainer.style.display = "initial";
+
+        loaderVisible = true;
     }
 }

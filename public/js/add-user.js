@@ -66,7 +66,7 @@ function toggleLoader() {
     if (loaderVisible) {
         formLoaderContainer.style.display = "none";
         formFieldsets.forEach(el => {
-            el.style.display = "initial";
+            el.style.display = "block";
         })
         formSubmitRow.style.display = "initial";
 

@@ -53,6 +53,7 @@ function pushUserDetailsToServer() {
         userFirstName: formFirstNameInput.value,
         userMiddleNames: formMiddleNames.value,
         userLastName: formLastNameInput.value,
+        userEmail: formEmailInput.value,
         userRole: formUserRoleSelect.options[formUserRoleSelect.selectedIndex].text,
     })
     .then(function(docRef) {

@@ -328,13 +328,15 @@ ________________________________*/
 .users-nav-link:hover{
     text-decoration: underline;
 }
-.users-nav-link:active{
-    text-decoration: overline;
-}
 .users-nav-link.active{
     background-color: rgba(255, 255, 255, 0.85);
-    border-radius: 0px 15px 0px 0px;
     color: #3b78ba;
+}
+.users-nav-link:first-of-type {
+    border-radius: 15px 0px 0px 0px;
+}
+.users-nav-link:last-of-type {
+    border-radius: 0px 15px 0px 0px;
 }
 
 

@@ -13,7 +13,7 @@ let loaderVisible = false;
 
 formSubmitBtn.addEventListener('click', (event) => {
     // Todo: Change submit element type to button because input type causing refresh before this line loads
-    event.preventDefault();
+    // event.preventDefault();
 
     // Validation
     validateForm();

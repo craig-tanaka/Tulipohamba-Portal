@@ -4,7 +4,7 @@ body {
     font-size: 16px;
     color: #08355a;
 }
-input {
+input,select {
     font-family: 'Exo 2', sans-serif !important;
     font-weight: 300;
     border-color: #08355a;
@@ -264,7 +264,7 @@ ________________________________*/
 }
 
 .main-content-header {
-    background-color: #4F5467;
+    background-color: #1561a0;
     color: white;
     padding: 1.5rem 2rem;
 
@@ -498,3 +498,52 @@ ________________________________*/
     display: block;
 }
 /* #endregion _________Users Conent_________ */
+
+/* #region ___________________________Add-Users____ */
+.add-user-form{
+    max-width: 500px;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+.form-header{
+    margin-left: 1rem;
+    text-transform: uppercase;
+}
+
+.form-fieldset{
+    padding-bottom: 1.5rem;
+}
+.form-fieldset:not(:first-of-type){
+    margin-top: 2rem;
+}
+
+.form-legend::first-letter {
+    font-size: 1rem;
+}
+.form-legend{
+    font-size: .7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.form-row{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10%;
+    margin-top: 1rem;
+}
+.form-select,.form-input{
+    padding: .5rem .25rem;
+    border: 1px solid #092b5769;
+    border-radius: 5px;
+    background-color: #d9dfeda8;
+    color: #5a6670;
+    width: 10rem;
+}
+.form-select{
+    box-sizing: content-box;
+}
+.form-submit{
+    margin-top: .5rem;
+    font-weight: bold;
+}
+/* #endregion ____________________________Add-Users____ */

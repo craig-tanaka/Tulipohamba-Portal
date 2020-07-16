@@ -307,14 +307,37 @@ ________________________________*/
 
     display: flex;
 }
-.users-content-header {
+.users-nav {
     background-color: #3b78ba;
     border: 1px solid #3b78ba;
+    margin-left: 1rem;
     color: white;
-    padding: 1rem;
     width: max-content;
     border-radius: 15px 15px 0px 0px;
+    display: flex;
 }
+.users-nav-link{
+    padding: .75rem 1rem;
+    box-sizing: content-box;
+    color: white;
+    text-decoration: none;
+}
+.users-nav-link:not(:last-of-type){
+    border-right: 1px solid white;
+}
+.users-nav-link:hover{
+    text-decoration: underline;
+}
+.users-nav-link:active{
+    text-decoration: overline;
+}
+.users-nav-link.active{
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 0px 15px 0px 0px;
+    color: #3b78ba;
+}
+
+
 .content-main{
     margin-right: 2rem;
 }

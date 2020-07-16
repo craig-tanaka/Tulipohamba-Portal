@@ -307,6 +307,14 @@ ________________________________*/
 
     display: flex;
 }
+.users-content-header {
+    background-color: #3b78ba;
+    border: 1px solid #3b78ba;
+    color: white;
+    padding: 1rem;
+    width: max-content;
+    border-radius: 15px 15px 0px 0px;
+}
 .content-main{
     margin-right: 2rem;
 }

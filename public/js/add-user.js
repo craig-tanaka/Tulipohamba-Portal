@@ -13,7 +13,7 @@ let loaderVisible = false;
 
 formSubmitBtn.addEventListener('click', (event) => {
     // Todo: Change submit element type to button because input type causing refresh before this line loads
-    // event.preventDefault();
+    event.preventDefault();
 
     // Validation
     validateForm();
@@ -49,7 +49,7 @@ function validateForm() {
 }
 
 function pushUserDetailsToServer() {
-    db.collection("users-waitlist").add({
+    db.collection("users").add({
         userFirstName: formFirstNameInput.value,
         userMiddleNames: formMiddleNames.value,
         userLastName: formLastNameInput.value,

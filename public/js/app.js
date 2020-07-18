@@ -73,7 +73,7 @@ function addUserSidebarLinks(user) {
                         </div>`
     }
 
-    if (user.accountType === 'Admin') {
+    if (user.userRole === 'Admin') {
         sidebarLinksElement.innerHTML += sidebarLinks.announcements;
         sidebarLinksElement.innerHTML += sidebarLinks.calendar;
         sidebarLinksElement.innerHTML += sidebarLinks.users;

@@ -362,6 +362,7 @@ ________________________________*/
 .announcement.add-announement{
     background: transparent;
     box-shadow: none;
+    margin-bottom: 2rem
 }
     .announcement-body {
         margin-top: .5rem;

@@ -359,6 +359,10 @@ ________________________________*/
     padding: 1.25rem;
     background: white;
 }
+.announcement.add-announement{
+    background: transparent;
+    box-shadow: none;
+}
     .announcement-body {
         margin-top: .5rem;
         margin-bottom: 0.5rem;
@@ -368,12 +372,33 @@ ________________________________*/
         font-size: 1.2rem;
         font-weight: bold;
     }
+    .add-announement .announcement-title{
+        text-align: center;
+    }
     .announcement-date {
         margin-top: .5rem;
         font-size: .8rem;
         font-weight: 300;
-
-}
+    }
+    .add-announement-btn{
+        margin: 0 40%;
+        padding: 1rem;
+        width: 20%;
+        margin-top: 1rem;
+        border-radius: 10px;
+        background: #dfdfdf;
+        cursor: pointer;
+        outline-color: transparent;
+    }
+    .add-announement-btn:hover{
+        box-shadow: 1px 1px 3px 0 rgba(14, 36, 97, 0.452);
+    }
+    .add-announement-btn:active{
+        box-shadow: inset 1px 1px 3px 0 rgba(14, 36, 97, 0.452);
+    }
+    .add-announcement-img{
+        width: 4rem;
+    }
 
 @media(max-width: 969px) {
     .sidebar-toggle-btn {

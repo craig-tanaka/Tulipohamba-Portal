@@ -355,6 +355,7 @@ ________________________________*/
 /* ____________Announcements____________ */
 .add-announement-options{
     display: flex;
+    display: none;
     justify-content: space-around;
     margin-top: 2rem;
 }
@@ -431,7 +432,7 @@ ________________________________*/
         background: #dfdfdf;
         cursor: pointer;
         outline-color: transparent;
-        display: none;
+        display: initial;
     }
     .add-announement-btn:hover{
         box-shadow: 1px 1px 3px 0 rgba(14, 36, 97, 0.452);

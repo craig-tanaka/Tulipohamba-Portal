@@ -5,6 +5,9 @@ const addBasicAnnouncementForm = document.querySelector('form.add-basic-announce
 const addAttachementBtn = document.querySelector('.add-basic-announcement .file-input button')
 const addAttachementBtnLabel = document.querySelector('.add-basic-announcement .file-input span')
 const attachmentRealInput = document.querySelector('.add-basic-announcement input[type="file"]')
+const addAnnouncementsSubmitBtn = document.querySelector('.add-basic-announcement .form-input[type="submit"]')
+const addAnnouncementTitleInput = document.querySelector('#announcement-title-input')
+const addAnnouncementContentInput = document.querySelector('#announcement-content-input')
 
 addAnnouncementsBtn.addEventListener('click', event => {
     addAnnouncementsBtn.style.display = 'none';
@@ -24,3 +27,38 @@ addAttachementBtn.addEventListener('click', event => {
 attachmentRealInput.addEventListener('change', event => {
     addAttachementBtnLabel.innerHTML = event.target.files[0].name;
 })
+addAnnouncementsSubmitBtn.addEventListener('click', event => {
+    event.preventDefault();
+
+    // Form Validation
+    validateAddAnnouncementsForm();
+
+    // Sending File Attachments to firebase storage 
+    // Send Document to firestore
+})
+
+
+
+function validateAddAnnouncementsForm() {
+    let hasNoErrors = true;
+    if (addAnnouncementTitleInput.value === '') {
+        // alert('Yooooo')
+        addAnnouncementTitleInput.style.borderColor = 'red';
+        addAnnouncementTitleInput.setAttribute('placeholder', 'Announcement Title is Required:')
+        hasNoErrors = false;
+    } else if (addAnnouncementTitleInput.value !== '') {
+        addAnnouncementTitleInput.style.borderColor = '#092b5769';
+    }
+
+
+    if (addAnnouncementContentInput.value === '') {
+        addAnnouncementContentInput.style.borderColor = 'red';
+        addAnnouncementContentInput.setAttribute('placeholder', 'Announcement Content is Required:')
+        hasNoErrors = false;
+    }
+    else if (addAnnouncementContentInput.value !== '') {
+        addAnnouncementContentInput.style.borderColor = '#092b5769';
+    }
+
+    return hasNoErrors;
+}

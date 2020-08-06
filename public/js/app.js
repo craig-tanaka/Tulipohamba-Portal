@@ -69,7 +69,7 @@ function addUserSidebarLinks(user) {
                     </div>`,
         announcements: `<div class="sidebar-link">
                             <img src="./img/announcements-vector.png" class="sidebar-link-img">
-                            <a href="">Announcements</a>
+                            <a href="../announcements.html">Announcements</a>
                         </div>`
     }
 

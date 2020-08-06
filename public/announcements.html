@@ -26,6 +26,8 @@
 
 <body>
     <!-- TODO: add pinned announcements functionality-->
+    <!-- Todo: add ability to change header image -->
+    <!-- Todo: improve sidebar design -->
 
     <div class="page-content">
         <section class="sidebar-overlay"></section>
@@ -80,15 +82,25 @@
                                     <img src="./img/add-announcements-vector.png" alt="Add Announcements" class="add-announcement-img">
                                 </button>
                                 <div class="add-announement-options">
-                                    <div class="add-announement-option">
+                                    <div class="add-announement-option basic">
                                         <img src="./img/basic-announcement vector.jpg" alt="" class="add-announement-option-img">
                                         <h5 class="header">Basic Announcement</h5>
                                     </div>
-                                    <div class="add-announement-option">
+                                    <div class="add-announement-option poll">
                                         <img src="./img/poll-announement-vector.jpg" alt="" class="add-announement-option-img">
                                         <h5 class="header">Poll Announcement</h5>
                                     </div>
                                 </div>
+                                <form class="add-basic-announcement">
+                                    <input  class="form-input" type="text" placeholder="Announcement Title:">
+                                    <textarea class="form-input" name="" placeholder="Announcement Content:" id="" cols="30" rows="10"></textarea>
+                                    <input type="file" name="" id="">
+                                    <div class="form-input file-input">
+                                        <span>Add File Attachement :</span>
+                                        <button>+</button>
+                                    </div>
+                                    <input class="form-input" type="submit" value="Create Announcment">
+                                </form>
                             </div>
                         </div>
                         <div class="announcement">

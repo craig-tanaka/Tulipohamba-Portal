@@ -391,6 +391,7 @@ ________________________________*/
 
 .content-main {
     margin-right: 2rem;
+    width: 90vw;
 }
 
 .main-content-body-img {
@@ -470,6 +471,17 @@ ________________________________*/
     margin-bottom: 0.5rem;
 }
 
+.announcement-attachment{
+    cursor: pointer;
+    display: flex;
+    text-decoration: none;
+}
+
+.attachement-vector{
+    width: 1rem;
+    margin-right: .25rem;
+}
+
 .announcement-title {
     margin: 0;
     font-size: 1.2rem;
@@ -501,13 +513,16 @@ ________________________________*/
 .add-announement-btn:hover {
     box-shadow: 1px 1px 3px 0 rgba(14, 36, 97, 0.452);
 }
+
 .add-announement-btn:active {
     box-shadow: inset 1px 1px 3px 0 rgba(14, 36, 97, 0.452);
 }
+
 .add-announcement-img {
     width: 4rem;
 }
-form.add-basic-announcement{
+
+form.add-basic-announcement {
     display: none;
     background-color: #6ab8ca40;
     width: 50%;
@@ -516,26 +531,31 @@ form.add-basic-announcement{
     padding: 5%;
     box-shadow: inset 1px 1px 3px 0px #3f0a0a38;
 }
-.add-basic-announcement .form-input{
+
+.add-basic-announcement .form-input {
     display: block;
     width: 97%;
 }
-.add-basic-announcement>.form-input:not(:first-child){
+
+.add-basic-announcement>.form-input:not(:first-child) {
     margin-top: 1rem;
 }
-.add-basic-announcement input[type="file"]{
+
+.add-basic-announcement input[type="file"] {
     display: none;
 }
-.add-basic-announcement .file-input{
-background: transparent;
-border: none;
-width: max-content;
-margin: 0 auto;
-display: flex;
-margin-top: .5rem;
-align-items: center;
+
+.add-basic-announcement .file-input {
+    background: transparent;
+    border: none;
+    width: max-content;
+    margin: 0 auto;
+    display: flex;
+    margin-top: .5rem;
+    align-items: center;
 }
-.add-basic-announcement .file-input button{
+
+.add-basic-announcement .file-input button {
     font-size: 1.25rem;
     background: #80808054;
     padding: .5rem 1rem;
@@ -544,7 +564,8 @@ form.add-basic-announcement{
     /* line-height: 35px; */
     /* margin-right: .25rem; */
 }
-.add-basic-announcement .file-input span{
+
+.add-basic-announcement .file-input span {
     font-size: .85rem;
     margin-right: .5rem;
     overflow-x: hidden;
@@ -579,7 +600,7 @@ form.add-basic-announcement{
 _____________Calendar_____________ 
 ________________________________*/
 .calendar-section {
-    width: 60vw;
+    /* width: 60vw; */
     height: max-content;
     box-sizing: border-box;
     padding: 1rem;
@@ -782,7 +803,7 @@ ________________________________*/
     width: 10rem;
 }
 
-.form-input[type="submit"]{
+.form-input[type="submit"] {
     background-color: #092b57;
     color: white;
     width: max-content;

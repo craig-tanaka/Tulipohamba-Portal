@@ -12,9 +12,9 @@ firebase.auth().onAuthStateChanged(function (_user) {
     if (_user) {
         user = _user;
         getUserDetails(user);
-
+        downloadAnnouncements()
     } else {
-        // window.location.replace('../index.html');
+        // TODO: window.location.replace('../index.html');
     }
 });
 
@@ -44,6 +44,7 @@ function getUserDetails(user) {
             // Todo: Alert user or developer of error
         })
 }
+
 function addUserSidebarLinks(user) {
     const sidebarLinksElement = document.querySelector('.sidebar-links')
     const sidebarLinks = {
@@ -51,7 +52,7 @@ function addUserSidebarLinks(user) {
                     <img src = "./img/users-vector.png" class="sidebar-link-img">
                     <a href="../add-user.html">Users</a> 
                 </div>`,
-        studentElearning:   `<div class="sidebar-link">
+        studentElearning: `<div class="sidebar-link">
                                 <img src="./img/elearning.png" class="sidebar-link-img">
                                 <a href="">Student E-learning</a>
                             </div>`,
@@ -80,3 +81,56 @@ function addUserSidebarLinks(user) {
         sidebarLinksElement.innerHTML += sidebarLinks.studentElearning;
     }
 }
+
+function downloadAnnouncements() {
+    if (document.querySelector('.announcements')) {
+        let announcementsRef = db.collection('announcements').orderBy('created', 'desc').limit(6);
+
+        announcementsRef.get().then(function (querySnapshot) {
+            querySnapshot.forEach(function (doc) {
+                // doc.data() is never undefined for query doc snapshots
+                // console.log(doc.id, " => ", doc.data());
+                if (doc.data().hasAttachment) {
+                    addAnnouncementWithAttachment(doc.id, doc.data());
+                } else {
+                    addAnnouncement(doc.id, doc.data());
+                }
+            });
+        });
+    }
+}
+
+function addAnnouncement(docId, doc) {
+    let month = doc.created.toDate().toLocaleString('default', {
+        month: 'long'
+    });
+    let date = `${doc.created.toDate().getDate()} ${month} ${doc.created.toDate().getFullYear()}`;
+
+    document.querySelector('.announcements').innerHTML +=
+        `<div class="announcement">
+            <h3 class="announcement-title">${doc.title}</h3>
+            <p class="announcement-body">${doc.content}</p>
+            <div class="announcement-date">${date}</div>
+        </div>`;
+}
+function addAnnouncementWithAttachment(docId, doc) {
+    let month = doc.created.toDate().toLocaleString('default', {
+        month: 'long'
+    });
+    let date = `${doc.created.toDate().getDate()} ${month} ${doc.created.toDate().getFullYear()}`;
+
+    document.querySelector('.announcements').innerHTML +=
+        `<div class="announcement">
+            <h3 class="announcement-title">${doc.title}</h3>
+            <p class="announcement-body">${doc.content}</p>
+            <a href="https://firebasestorage.googleapis.com/v0/b/${firebase.storage().bucket_.bucket}/o/Announcement-Attachments/${docId}/${doc.attachmentFileName}" target="__blank"
+            class="announcement-attachment">
+                <img src="./img/attachment-file-vector.png"
+                    alt="Attachement" class="attachement-vector">
+                <span class="attachement-file-name"> ${doc.attachmentFileName}</span> 
+            </a>
+            <div class="announcement-date">${date}</div>
+        </div>`;
+}
+
+// Todo: delete attachmnt on announcement delete

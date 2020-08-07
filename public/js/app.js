@@ -113,17 +113,20 @@ function addAnnouncement(docId, doc) {
             <div class="announcement-date">${date}</div>
         </div>`;
 }
-function addAnnouncementWithAttachment(docId, doc) {
+async function addAnnouncementWithAttachment(docId, doc) {
     let month = doc.created.toDate().toLocaleString('default', {
         month: 'long'
     });
     let date = `${doc.created.toDate().getDate()} ${month} ${doc.created.toDate().getFullYear()}`;
 
+    let url = await firebase.storage().ref(`Announcement-Attachments/${docId}/${doc.attachmentFileName}`).getDownloadURL();
+
+
     document.querySelector('.announcements').innerHTML +=
         `<div class="announcement">
             <h3 class="announcement-title">${doc.title}</h3>
             <p class="announcement-body">${doc.content}</p>
-            <a href="https://firebasestorage.googleapis.com/v0/b/${firebase.storage().bucket_.bucket}/o/Announcement-Attachments/${docId}/${doc.attachmentFileName}" target="__blank"
+            <a href="${url}" target="__blank"
             class="announcement-attachment">
                 <img src="./img/attachment-file-vector.png"
                     alt="Attachement" class="attachement-vector">

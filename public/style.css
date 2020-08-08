@@ -544,6 +544,12 @@ form.add-basic-announcement {
     .main-content-body {
         padding: 1.5rem;
     }
+    .add-announement-btn{
+        width: max-content;
+    }
+    form.add-basic-announcement{
+        width: 90%;
+    }
 
     .content-main {
         margin-right: 0;

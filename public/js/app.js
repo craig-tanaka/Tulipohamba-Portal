@@ -12,11 +12,11 @@ firebase.auth().onAuthStateChanged(function (_user) {
     if (_user) {
         user = _user;
         getUserDetails(user);
-        downloadAnnouncements()
     } else {
         // TODO: window.location.replace('../index.html');
     }
 });
+downloadAnnouncements()
 
 
 // #region _____________________EVENT LISTENERS_______________________
@@ -106,34 +106,38 @@ function addAnnouncement(docId, doc) {
     });
     let date = `${doc.created.toDate().getDate()} ${month} ${doc.created.toDate().getFullYear()}`;
 
-    document.querySelector('.announcements').innerHTML +=
-        `<div class="announcement">
-            <h3 class="announcement-title">${doc.title}</h3>
-            <p class="announcement-body">${doc.content}</p>
-            <div class="announcement-date">${date}</div>
-        </div>`;
+    let newAnnouncement = document.createElement('div');
+    newAnnouncement.className = 'announcement';
+    newAnnouncement.innerHTML = `
+        <h3 class="announcement-title">${doc.title}</h3>
+        <p class="announcement-body">${doc.content}</p>
+        <div class="announcement-date">${date}</div>`;
+
+    document.querySelector('.announcements').append(newAnnouncement);
 }
-async function addAnnouncementWithAttachment(docId, doc) {
+function addAnnouncementWithAttachment(docId, doc) {
     let month = doc.created.toDate().toLocaleString('default', {
         month: 'long'
     });
     let date = `${doc.created.toDate().getDate()} ${month} ${doc.created.toDate().getFullYear()}`;
 
-    let url = await firebase.storage().ref(`Announcement-Attachments/${docId}/${doc.attachmentFileName}`).getDownloadURL();
-
-
-    document.querySelector('.announcements').innerHTML +=
-        `<div class="announcement">
-            <h3 class="announcement-title">${doc.title}</h3>
+    firebase.storage().ref(`Announcement-Attachments/${docId}/${doc.attachmentFileName}`).getDownloadURL()
+        .then(url => {
+            let newAnnouncement = document.createElement('div');
+            newAnnouncement.className = 'announcement';
+            newAnnouncement.innerHTML = 
+            `<h3 class="announcement-title">${doc.title}</h3>
             <p class="announcement-body">${doc.content}</p>
             <a href="${url}" target="__blank"
-            class="announcement-attachment">
+                    class="announcement-attachment">
                 <img src="./img/attachment-file-vector.png"
                     alt="Attachement" class="attachement-vector">
                 <span class="attachement-file-name"> ${doc.attachmentFileName}</span> 
             </a>
-            <div class="announcement-date">${date}</div>
-        </div>`;
+            <div class="announcement-date">${date}</div>`;
+
+            document.querySelector('.announcements').append(newAnnouncement);
+        })
 }
 
 // Todo: delete attachmnt on announcement delete

@@ -404,48 +404,6 @@ ________________________________*/
 }
 
 /* ____________Announcements____________ */
-.add-announement-options {
-    display: flex;
-    display: none;
-    justify-content: space-around;
-    margin-top: 2rem;
-}
-
-.add-announement-option {
-    width: 45%;
-    cursor: pointer;
-    position: relative;
-    /* height: max-content; */
-}
-
-.add-announement-option:hover {
-    box-shadow: 1px 1px 3px 0px rgb(29, 54, 165);
-    /* todo: generalize colours used through out */
-}
-
-.add-announement-option:active {
-    box-shadow: inset 1px 1px 3px 0 rgba(14, 36, 97, 0.452);
-}
-
-.add-announement-option>.header {
-    position: absolute;
-    /* color: white; */
-    top: 40px;
-    width: 100%;
-    text-align: center;
-    font-size: 1.3rem;
-    text-shadow: 1px 1px 3px #e87e7eb5;
-}
-
-.add-announement-option-img {
-    width: 100%;
-    /* margin-left: 10%; */
-    height: 180px;
-    object-fit: cover;
-    margin-bottom: -3px;
-    /* margin-right: -5px; */
-}
-
 .announcement {
     border: 1px solid rgba(10, 32, 54, 0.15);
     /* box-shadow: 1px 1px 5px 0 #1b5280; */

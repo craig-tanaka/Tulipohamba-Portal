@@ -1,7 +1,5 @@
 const addAnnouncementsBtn = document.querySelector('.add-announement-btn');
-const addAnnouncementsOptions = document.querySelector('.add-announement-options');
-const addBasicAnnouncementBtn = document.querySelector('.add-announement-option.basic')
-const addBasicAnnouncementForm = document.querySelector('form.add-basic-announcement')
+const addAnnouncementForm = document.querySelector('form.add-basic-announcement');
 const addAttachementBtn = document.querySelector('.add-basic-announcement .file-input button')
 const addAttachementBtnLabel = document.querySelector('.add-basic-announcement .file-input span')
 const attachmentRealInput = document.querySelector('.add-basic-announcement input[type="file"]')
@@ -13,11 +11,7 @@ const loader = document.querySelector('.loader-container');
 
 addAnnouncementsBtn.addEventListener('click', event => {
     addAnnouncementsBtn.style.display = 'none';
-    addAnnouncementsOptions.style.display = 'flex';
-});
-addBasicAnnouncementBtn.addEventListener('click', event => {
-    addAnnouncementsOptions.style.display = 'none';
-    addBasicAnnouncementForm.style.display = 'block';
+    addAnnouncementForm.style.display = 'block';
 });
 addAttachementBtn.addEventListener('click', event => {
     // Todo: change bn outline color
@@ -84,7 +78,7 @@ function uploadAttachment(announcementId) {
             loaderLog('file uploaded.');
             alert('Announcement Uploaded Successfully');
             hideLoader();
-            addBasicAnnouncementForm.style.display = 'none';
+            addAnnouncementForm.style.display = 'none';
             addAnnouncementsBtn.style.display = 'block';
     });
 }
@@ -102,7 +96,7 @@ function uploadAnnouncement() {
             loaderLog('Announcement Successfully Pushed To Server');
             alert('Announcement Uploaded Successfully');
             hideLoader();
-            addBasicAnnouncementForm.style.display = 'none';
+            addAnnouncementForm.style.display = 'none';
             addAnnouncementsBtn.style.display = 'block';
         })
         .catch(function (error) {

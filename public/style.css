@@ -785,3 +785,60 @@ ________________________________*/
 }
 
 /* #endregion ____________________________Add-Users____ */
+
+
+
+/* #region _______________________________________
+______________________Results-Page________________
+_________________________________________________ */
+.results-table {
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+.results-table,
+.results-table td,
+.results-table th,
+.results-table caption{
+    border: 1px solid gray;
+}
+.results-table th,
+.results-table caption,
+.results-table tfoot td{
+    padding: .5rem .5rem;
+}
+.results-table caption{
+    background-color: #1561a0;
+    color: white;
+    /* font-weight: 900; */
+    font-size: 1.5rem;
+}
+.results-table th:first-child{
+    text-align: left;
+}
+.results-table td:first-child{
+    width: 70%;
+}
+.results-table td:not(:first-child){
+    text-align: center;
+}
+.results-table input{
+    background-color: #5a66703b;
+    border: none;
+    font-size: 1rem;
+    font-weight: normal;
+    width: 100%;
+    box-sizing: border-box;
+}
+.results-table .mark-input{
+    text-align: center;
+}
+
+
+.results-table-submit{
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+/* #endregion _______________________________________
+______________________Results-Page________________
+_________________________________________________ */
+

@@ -71,6 +71,10 @@ function addUserSidebarLinks(user) {
         announcements: `<div class="sidebar-link">
                             <img src="./img/announcements-vector.png" class="sidebar-link-img">
                             <a href="../announcements.html">Announcements</a>
+                        </div>`,
+        results: `<div class="sidebar-link">
+                            <img src="./img/results-vector.png" class="sidebar-link-img">
+                            <a href="../results.html">Results</a>
                         </div>`
     }
 
@@ -78,7 +82,9 @@ function addUserSidebarLinks(user) {
         sidebarLinksElement.innerHTML += sidebarLinks.announcements;
         sidebarLinksElement.innerHTML += sidebarLinks.calendar;
         sidebarLinksElement.innerHTML += sidebarLinks.users;
+        sidebarLinksElement.innerHTML += sidebarLinks.results;
         sidebarLinksElement.innerHTML += sidebarLinks.studentElearning;
+        // Todo: add links without 'innerHtml+=' 
     }
 }
 

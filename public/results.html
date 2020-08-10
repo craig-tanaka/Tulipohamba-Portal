@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tulipohamba Training Portal | Results</title>
+    <!-- Todo: fix the titles of other pages -->
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.14.6/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.14.6/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.14.6/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.14.6/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/7.14.6/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.14.6/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <script defer src="./js/app.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- TODO: add pinned announcements functionality-->
+    <!-- Todo: add ability to change header image -->
+    <!-- Todo: improve sidebar design -->
+
+    <div class="page-content">
+        <section class="sidebar-overlay"></section>
+        <section class="sidebar">
+
+            <div class="sidebar-back-btn-container">
+                <button class="sidebar-back-btn">
+                    <img src="./img/close drawer vector.png" alt="" class="sidebar-back-btn-img">
+                </button>
+            </div>
+
+            <a href="home.html" class="sidebar-header">
+                <div class="sidebar-header-img-container">
+                    <img src="./img/logo icon white.png" alt="Tulipohamba Training & Assessment Institute"
+                        class="sidebar-header-img">
+                </div>
+                <div class="site-title">Tulipohamba</div>
+                <div class="site-subtitle">Training & Assestment Institute</div>
+            </a>
+
+            <nav class="sidebar-links">
+
+
+
+
+            </nav>
+        </section>
+        <section class="main-content">
+
+            <div class="main-content-header">
+                <button type="button" class="sidebar-toggle-btn">
+                    <img class="sidebar-toggle-btn-img" src="./img/hamburger menu.svg" alt="sidebar toggle button">
+                </button>
+                <div class="content-header-greeting">
+                    Hey, <span class="greeting-name">Student 1</span>
+                </div>
+                <div class="content-header-logout-btn">
+                    <img src="img/logout vector.png" alt="" class="header-logout-vector">
+                    <span>Logout</span>
+                </div>
+            </div>
+
+            <div class="main-content-body">
+                <main class="content-main">
+                    
+                </main>
+
+                <div class="calendar-section">
+                    <div class="calendar-section-time-widget">
+                        <div class="time-widget-time">21 : 51</div>
+                        <div class="time-widget-date">Wednesday, June 3, 2020</div>
+                    </div>
+
+                    <div class="calendar-section-events">
+                        <div class="calendar-section-events-header">Upcoming Events</div>
+                        <div class="calendar-section-event-body">
+                            <div class="event">
+                                <div class="event-date">15 Jun</div>
+                                <div class="event-detail">Annual PTA Meeting</div>
+                            </div>
+                            <div class="event">
+                                <div class="event-date">21 Jun</div>
+                                <div class="event-detail">BLS Conference</div>
+                            </div>
+                            <div class="event">
+                                <div class="event-date">24 Jun</div>
+                                <div class="event-detail">Online Assestments</div>
+                            </div>
+                            <div class="event">
+                                <div class="event-date">2 Jul</div>
+                                <div class="event-detail">End of Semester</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="online-users-wdiget">
+                        <div class="online-users-widget-title">
+                            No of Online Users:
+                            <span class="online-users-count">25</span>
+                        </div>
+                        <div class="widget-graph">
+                            <div class="staff-bar"></div>
+                            <div class="students-bar"></div>
+                        </div>
+                        <div class="widget-graph-legend">
+                            <div class="legend-item">
+                                <div class="legend-item-color"></div>
+                                <div>Staff</div>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-item-color students"></div>
+                                <div>Students</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

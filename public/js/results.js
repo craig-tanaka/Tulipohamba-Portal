@@ -3,7 +3,6 @@ const tableBody = document.querySelector('.results-table tbody');
 const tableSubmitBtn = document.querySelector('.results-table-submit');
 const loader = document.querySelector('.loader-container');
 
-
 // ____________Variables________________
 let lastNameInput = document.querySelector('.results-table .last-name-input');
 
@@ -21,15 +20,18 @@ function addNewRow(e) {
             <input type="text" placeholder="Student Number" class="student-number-input">
         </td>
         <td>
-            <input type="text" placeholder="Student Name" class="last-name-input">
+            <input type="text" placeholder="Student Name" class="name-input last-name-input">
         </td>
         <td>
             <input type="text" placeholder="Student Mark" class="mark-input">
         </td>`;
     tableBody.appendChild(newRow);
+    updateLastNameInput();
+}
+function updateLastNameInput() {
     lastNameInput.classList.remove('last-name-input');
     lastNameInput.removeEventListener('input', addNewRow);
-    lastNameInput = document.querySelector('.results-table .last-name-input');
+    lastNameInput = document.querySelector('.results-table tbody tr:nth-last-of-type(1) .name-input');
     lastNameInput.addEventListener('input', addNewRow);
 }
 function submitResults() {
@@ -79,3 +81,48 @@ function hideLoader() {
 function loaderLog(msg) {
     document.querySelector('.loader-log').innerHTML = msg;
 }
+function getResults() {
+    loaderLog('Getting Results..')
+    db.collection('AcademicRecords2020').doc('BasicLifeServices').get()
+        .then(doc => {
+            console.log("Doc id: ", doc.id);
+            console.log("Data : ", doc.data());
+            displayResults(doc.data().results)
+        })
+        .catch(error => {
+            alert('Could not get Results from Server. Try Again');
+            // alert(error)
+            console.log(error);
+        })
+}
+function displayResults(results) {
+    let studentRows = document.querySelectorAll('.results-table tbody tr');
+    if (studentRows.length <= results.length) {
+        let neededRows = (results.length - studentRows.length) + 1 // the +1 is we can have an exta empty row at the bottom
+        for (let i = 0; i < neededRows; i++) {
+            addNewRow()            
+        }
+        updateLastNameInput();
+        studentRows = document.querySelectorAll('.results-table tbody tr'); // update studentRows refernce (todo: might not be neccessary, check needed)
+    }
+
+    // Displaying The Table and setting The styling
+    loader.style.marginTop = '.5rem';
+    document.querySelector('.results-table').style.display = 'table';
+    hideLoader();
+
+    // Populating The Table
+    for (let i = 0; i < results.length; i++) {
+        studentRows[i].children[0].children[0].value = results[i].studentNumber;
+        studentRows[i].children[1].children[0].value = results[i].studentName;
+        studentRows[i].children[2].children[0].value = results[i].studentMark;
+        
+    }
+}
+function createTable(rows) {
+    
+}
+
+
+// ____________Page_Entry________________ 
+getResults();

@@ -793,6 +793,7 @@ ________________________________*/
 ______________________Results-Page________________
 _________________________________________________ */
 .results-table {
+    display: none;
     margin-top: 2rem;
     margin-left: 1rem;
 }
@@ -838,7 +839,7 @@ _________________________________________________ */
 .results-table-submit{
     margin: 1rem auto 0;
     text-align: center;
-    display: block;
+    display: none;
 }
 /* #endregion _______________________________________
 ______________________Results-Page________________

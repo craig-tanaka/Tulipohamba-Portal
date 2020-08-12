@@ -1,5 +1,7 @@
 const db = firebase.firestore();
 let user;
+let userData;
+// let userLoadedInit = null;
 
 const sidebar = document.querySelector('section.sidebar');
 const sidebarOverlay = document.querySelector('section.sidebar-overlay');
@@ -14,7 +16,7 @@ firebase.auth().onAuthStateChanged(function (_user) {
         user = _user;
         getUserDetails(user);
     } else {
-        // TODO: window.location.replace('../index.html');
+        window.location.replace('../index.html');
     }
 });
 downloadAnnouncements()
@@ -47,6 +49,9 @@ function getUserDetails(user) {
     db.collection('users').doc(user.uid).get()
         .then(doc => {
             addUserSidebarLinks(doc.data());
+            userData = doc.data();
+            // This method provides a place for the individual pages js-files to hook into after user has loaded
+            if (userLoadedInit) userLoadedInit();
         })
         .catch(err => {
             console.log(err);

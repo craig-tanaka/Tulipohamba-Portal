@@ -875,6 +875,9 @@ ________________________________*/
 
 
 /* #region ________My-Results-Page__________________ */
+.my-results-container{
+    display: none;
+}
 .my-results-header{
     text-align: center;
 }
@@ -885,6 +888,7 @@ ________________________________*/
 }
 .my-results-table{
     width: 100%;
+    /* display: none; */
 }
 .my-results-table th,
 .my-results-table td{

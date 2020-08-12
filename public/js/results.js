@@ -7,6 +7,9 @@ function addNewRow(e) {
     const newRow = document.createElement('tr');
     newRow.innerHTML =
         `<td>
+            <input type="text" placeholder="Student Number" class="student-number-input">
+        </td>
+        <td>
             <input type="text" placeholder="Student Name" class="last-name-input">
         </td>
         <td>

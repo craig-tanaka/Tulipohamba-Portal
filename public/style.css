@@ -815,8 +815,8 @@ _________________________________________________ */
 .results-table th:first-child{
     text-align: left;
 }
-.results-table td:first-child{
-    width: 70%;
+.results-table td:nth-child(2){
+    width: 50%;
 }
 .results-table td:not(:first-child){
     text-align: center;

@@ -5,11 +5,21 @@ const loader = document.querySelector('.loader-container');
 
 // ____________Variables________________
 let lastNameInput = document.querySelector('.results-table .last-name-input');
+let moduleID = '';
 
 
 // ____________Event_Listeners________________
 lastNameInput.addEventListener('input', addNewRow);
 tableSubmitBtn.addEventListener('click', submitResults)
+document.querySelectorAll('.results-choice').forEach(element => {
+    element.addEventListener('click', event => {
+        moduleID = event.target.parentElement.id;
+        setModuleTitle(moduleID)
+        getResults(moduleID);
+        document.querySelector('.results-select').style.display = 'none';
+        document.querySelector('.results-view').style.display = 'block';
+    })
+})
 
 
 // ____________Functions________________
@@ -58,7 +68,7 @@ function submitResults() {
     });
 
 
-    db.collection('AcademicRecords2020').doc('BasicLifeServices').set({
+    db.collection('AcademicRecords2020').doc(moduleID).set({
         results: __results
     }).then(docRef => {
         alert("Results Updated")
@@ -72,6 +82,30 @@ function showLoader() {
     tableSubmitBtn.style.display = 'none';
     loader.style.display = 'block';
 }
+function setModuleTitle(__moduleID) {
+    let titleDisplay = document.querySelector('.results-table caption');
+
+    switch (__moduleID) {
+        case 'DSA':
+            titleDisplay.innerHTML = 'Dental Surgery Assistance - Results 2020';
+            break;
+        case 'CHE':
+            titleDisplay.innerHTML = 'Community Health Education - Results 2020';
+            break;
+        case 'COU':
+            titleDisplay.innerHTML = 'Counselling - Results 2020';
+            break;
+        case 'HSM':
+            titleDisplay.innerHTML = 'Healthcare Service Management - Results 2020';
+            break;
+        case 'OHS':
+            titleDisplay.innerHTML = 'Occupational Health and Safety - Results 2020';
+            break;
+        case 'BLS':
+            titleDisplay.innerHTML = 'Basic Life Support - Results 2020';
+            break;
+    }
+}
 
 function hideLoader() {
     loader.style.display = 'none';
@@ -81,9 +115,9 @@ function hideLoader() {
 function loaderLog(msg) {
     document.querySelector('.loader-log').innerHTML = msg;
 }
-function getResults() {
+function getResults(__moduleID) {
     loaderLog('Getting Results..')
-    db.collection('AcademicRecords2020').doc('BasicLifeServices').get()
+    db.collection('AcademicRecords2020').doc(__moduleID).get()
         .then(doc => {
             console.log("Doc id: ", doc.id);
             console.log("Data : ", doc.data());
@@ -119,10 +153,4 @@ function displayResults(results) {
         
     }
 }
-function createTable(rows) {
-    
-}
 
-
-// ____________Page_Entry________________ 
-getResults();

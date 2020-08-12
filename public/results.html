@@ -73,122 +73,153 @@
 
             <div class="main-content-body">
                 <main class="content-main">
-                    
-                    <table class="results-table">
-                        <caption>Basic Life Service Results</caption>
-                        <thead>
-                            <tr>
-                                <th>Student Number</th>
-                                <th>Student Name</th>
-                                <th>Student Mark</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            <tr>
-                                <td>
-                                    <input type="text" placeholder="Student Number" class="student-number-input">
-                                </td>
-                                <td>
-                                    <input type="text" placeholder="Student Name" class="name-input">
-                                </td>
-                                <td>
-                                    <input type="text" placeholder="Student Mark" class="mark-input">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="text" placeholder="Student Number" class="student-number-input">
-                                </td>
-                                <td>
-                                    <input type="text" placeholder="Student Name" class="name-input">
-                                </td>
-                                <td>
-                                    <input type="text" placeholder="Student Mark" class="mark-input">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="text" placeholder="Student Number" class="student-number-input">
-                                </td>
-                                <td>
-                                    <input type="text" placeholder="Student Name" class="name-input last-name-input">
-                                </td>
-                                <td>
-                                    <input type="text" placeholder="Student Mark" class="mark-input">
-                                </td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-                    <!-- TODO: Check if page is about to be left before save -->
-                    <button class="results-table-submit">Save Changes</button>
-                    <div class="loader-container">
-                        <div class="lds-hourglass">
+                    <div class="results-select">
+                        <!-- TODO: Make sure database collections are authenticated by the right users -->
+                        <h2 class="results-select-header">Select A Program's Results </h2>
+                        <div class="results-select-body">
+                            <div id="DSA" class="results-choice">
+                                <h3 class="results-choice-title">Dental Surgery Assistance (DSA)</h3>
+                                <img src="./img/dentist-assist.png" alt="Dental Surgery Assistance" class="results-choice-img">
+                            </div>
+                            <div id="CHE" class="results-choice">
+                                <h3 class="results-choice-title">Community Health Education (CHE)</h3>
+                                <img src="./img/health-management.png" alt="Community Health Education" class="results-choice-img">
+                            </div>
+                            <div id="COU" class="results-choice">
+                                <h3 class="results-choice-title">Counselling (COU)</h3>
+                                <img src="./img/counseling-vector_0.png" alt="Counselling" class="results-choice-img">
+                            </div>
+                            <div id="HSM" class="results-choice">
+                                <h3 class="results-choice-title">Healthcare Service Management (HSM)</h3>
+                                <img src="./img/Health-Care-Service-Management.png" alt="Healthcare Service Management" class="results-choice-img">
+                            </div>
+                            <div id="OHS" class="results-choice">
+                                <h3 class="results-choice-title">Occupational Health and Safety (OHS)</h3>
+                                <img src="./img/Occupational-Health-and-safety-922x1024.png" alt="Occupational Health and Safety" class="results-choice-img">
+                            </div>
+                            <div id="BLS" class="results-choice">
+                                <h3 class="results-choice-title">Basic Life Support (BLS)</h3>
+                                <img src="./img/Basic-life-support.png" alt="Dental Surgery Assistance" class="results-choice-img">
+                            </div>
                         </div>
-                        <div class="loader-log"></div>
-                        <style>
-                            .loader-container {
-                                display: block;
-                                position: relative;
-                                height: calc(64px + 1rem);
-                                width: 100%;
-                                margin: 0 auto;
-                                margin-top: 15rem;
-                                margin-bottom: 1rem;
-                            }
-
-                            .loader-log {
-                                margin-top: 70px;
-                                position: absolute;
-                                width: 100%;
-                                /* margin-left: -100px; */
-                                text-align: center;
-                                font-size: .9rem;
-                            }
-
-                            .lds-hourglass {
-                                /* overflow: hidden; */
-                                display: inline-block;
-                                /* position: relative; */
-                                width: 64px;
-                                height: 64 px;
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                margin-left: -32px;
-                                margin-top: -32px;
-                            }
-
-                            .lds-hourglass:after {
-                                content: " ";
-                                display: block;
-                                border-radius: 50%;
-                                width: 0;
-                                height: 0;
-                                margin: 6px;
-                                box-sizing: border-box;
-                                border: 26px solid #fff;
-                                border-color: rgb(134, 127, 127) transparent rgb(109, 106, 106) transparent;
-                                animation: lds-hourglass 1.2s infinite;
-                            }
-
-                            @keyframes lds-hourglass {
-                                0% {
-                                    transform: rotate(0);
-                                    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+                    </div>
+                    <div class="results-view">
+                        <table class="results-table">
+                            <caption></caption>
+                            <thead>
+                                <tr>
+                                    <th>Student Number</th>
+                                    <th>Student Name</th>
+                                    <th>Student Mark</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td>
+                                        <input type="text" placeholder="Student Number" class="student-number-input">
+                                    </td>
+                                    <td>
+                                        <input type="text" placeholder="Student Name" class="name-input">
+                                    </td>
+                                    <td>
+                                        <input type="text" placeholder="Student Mark" class="mark-input">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" placeholder="Student Number" class="student-number-input">
+                                    </td>
+                                    <td>
+                                        <input type="text" placeholder="Student Name" class="name-input">
+                                    </td>
+                                    <td>
+                                        <input type="text" placeholder="Student Mark" class="mark-input">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" placeholder="Student Number" class="student-number-input">
+                                    </td>
+                                    <td>
+                                        <input type="text" placeholder="Student Name" class="name-input last-name-input">
+                                    </td>
+                                    <td>
+                                        <input type="text" placeholder="Student Mark" class="mark-input">
+                                    </td>
+                                </tr>
+    
+                            </tbody>
+                        </table>
+                        <!-- TODO: Check if page is about to be left before save -->
+                        <button class="results-table-submit">Save Changes</button>
+                        <div class="loader-container">
+                            <div class="lds-hourglass">
+                            </div>
+                            <div class="loader-log"></div>
+                            <style>
+                                .loader-container {
+                                    display: block;
+                                    position: relative;
+                                    height: calc(64px + 1rem);
+                                    width: 100%;
+                                    margin: 0 auto;
+                                    margin-top: 15rem;
+                                    margin-bottom: 1rem;
                                 }
-
-                                50% {
-                                    transform: rotate(900deg);
-                                    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    
+                                .loader-log {
+                                    margin-top: 70px;
+                                    position: absolute;
+                                    width: 100%;
+                                    /* margin-left: -100px; */
+                                    text-align: center;
+                                    font-size: .9rem;
                                 }
-
-                                100% {
-                                    transform: rotate(1800deg);
+    
+                                .lds-hourglass {
+                                    /* overflow: hidden; */
+                                    display: inline-block;
+                                    /* position: relative; */
+                                    width: 64px;
+                                    height: 64 px;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    margin-left: -32px;
+                                    margin-top: -32px;
                                 }
-                            }
-                        </style>
+    
+                                .lds-hourglass:after {
+                                    content: " ";
+                                    display: block;
+                                    border-radius: 50%;
+                                    width: 0;
+                                    height: 0;
+                                    margin: 6px;
+                                    box-sizing: border-box;
+                                    border: 26px solid #fff;
+                                    border-color: rgb(134, 127, 127) transparent rgb(109, 106, 106) transparent;
+                                    animation: lds-hourglass 1.2s infinite;
+                                }
+    
+                                @keyframes lds-hourglass {
+                                    0% {
+                                        transform: rotate(0);
+                                        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+                                    }
+    
+                                    50% {
+                                        transform: rotate(900deg);
+                                        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+                                    }
+    
+                                    100% {
+                                        transform: rotate(1800deg);
+                                    }
+                                }
+                            </style>
+                        </div>
                     </div>
 
 

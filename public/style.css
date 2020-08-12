@@ -792,6 +792,37 @@ ________________________________*/
 /* #region _______________________________________
 ______________________Results-Page________________
 _________________________________________________ */
+.results-select-body{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.results-choice{
+    width: 30%;
+    cursor: pointer;
+    height: 16rem;
+    background: #8080803d;
+    margin-top: 1rem;
+    overflow: hidden;
+    border-radius: 3px;
+}
+    .results-choice:hover{
+        box-shadow: 1px 1px 3px 0px #2f147069;
+    }
+    .results-choice:active{
+        box-shadow: inset 1px 1px 3px 0px #2f147069;
+    }
+.results-choice-title{
+    text-align: center;
+}
+.results-choice-img{
+    width:100%;
+    height: 10rem;
+    object-fit: contain;
+}
+.results-view{
+    display: none;
+}
 .results-table {
     display: none;
     margin-top: 2rem;

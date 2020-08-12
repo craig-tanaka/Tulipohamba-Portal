@@ -164,3 +164,4 @@ function addAnnouncementWithAttachment(docId, doc) {
 }
 
 // Todo: delete attachmnt on announcement delete
+// todo: fix logout button

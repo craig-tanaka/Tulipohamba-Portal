@@ -789,9 +789,7 @@ ________________________________*/
 
 
 
-/* #region _______________________________________
-______________________Results-Page________________
-_________________________________________________ */
+/* #region _______________________Results-Page______ */
 .results-select-body{
     display: flex;
     justify-content: space-around;
@@ -824,7 +822,7 @@ _________________________________________________ */
     display: none;
 }
 .results-table {
-    display: none;
+    /* display: none; */
     margin-top: 2rem;
     margin-left: 1rem;
 }
@@ -872,7 +870,28 @@ _________________________________________________ */
     text-align: center;
     display: none;
 }
-/* #endregion _______________________________________
-______________________Results-Page________________
-_________________________________________________ */
+/* #endregion _____________Results-Page_____ */
 
+
+
+/* #region ________My-Results-Page__________________ */
+.my-results-header{
+    text-align: center;
+}
+.my-results-table, 
+.my-results-table th,
+.my-results-table td {
+    border: 1px solid gray;
+}
+.my-results-table{
+    width: 100%;
+}
+.my-results-table th,
+.my-results-table td{
+    padding: 1rem;
+}
+.my-results-table td {
+    background-color: #5a66703b;
+    text-align: center;
+}
+/* #endregion ________My-Results-Page__________________ */

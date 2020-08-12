@@ -109,3 +109,4 @@ function toggleLoader() {
         loaderVisible = true;
     }
 }
+// TODO: Change user password and offer a better default password

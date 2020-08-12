@@ -54,7 +54,7 @@ function addUserSidebarLinks(user) {
                 </div>`,
         studentElearning: `<div class="sidebar-link">
                                 <img src="./img/elearning.png" class="sidebar-link-img">
-                                <a href="">Student E-learning</a>
+                                <a href="https://elearning.tulipohambatraining.edu.na/login/index.php" target="__blank"> Student E-learning </a>
                             </div>`,
         academicRecord: `<div class="sidebar-link">
                             <img src="./img/academic-record-vector.png" class="sidebar-link-img">
@@ -75,7 +75,16 @@ function addUserSidebarLinks(user) {
         results: `<div class="sidebar-link">
                             <img src="./img/results-vector.png" class="sidebar-link-img">
                             <a href="../results.html">Results</a>
+                        </div>`,
+        myResults: `<div class="sidebar-link">
+                            <img src="./img/results-vector.png" class="sidebar-link-img">
+                            <a href="../my-results.html">My Results</a>
+                        </div>`,
+        examinationTimetable: `<div class="sidebar-link">
+                            <img src="./img/results-vector.png" class="sidebar-link-img">
+                            <a href="../examination-timetable.html">Examination Timetable</a>
                         </div>`
+        
     }
 
     if (user.userRole === 'Admin') {
@@ -85,6 +94,13 @@ function addUserSidebarLinks(user) {
         sidebarLinksElement.innerHTML += sidebarLinks.results;
         sidebarLinksElement.innerHTML += sidebarLinks.studentElearning;
         // Todo: add links without 'innerHtml+=' 
+    }
+    if (user.userRole === 'Student') {
+        sidebarLinksElement.innerHTML += sidebarLinks.myModules;
+        sidebarLinksElement.innerHTML += sidebarLinks.calendar;
+        sidebarLinksElement.innerHTML += sidebarLinks.myResults;
+        sidebarLinksElement.innerHTML += sidebarLinks.examinationTimetable;
+        sidebarLinksElement.innerHTML += sidebarLinks.studentElearning;
     }
 }
 

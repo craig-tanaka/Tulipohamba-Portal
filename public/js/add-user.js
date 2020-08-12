@@ -8,9 +8,19 @@ const formErrorLabel = document.querySelector('#form-error-label');
 const formSubmitRow = document.querySelector('#form-submit-row');
 const formLoaderContainer = document.querySelector('.loader-container');
 const formFieldsets = document.querySelectorAll('.add-user-form fieldset');
+const studentNumberInput = document.querySelector('#form-student-number-input');
 
 let loaderVisible = false;
 
+formUserRoleSelect.addEventListener('change', event => {
+    const studentNumberRow = document.querySelector('.student-number-row');
+    let role = formUserRoleSelect.value;
+    if (role === 'Student') {
+        studentNumberRow.style.display = 'flex';
+    } else {
+        studentNumberRow.style.display = 'none';
+    }
+})
 formSubmitBtn.addEventListener('click', (event) => {
     // Todo: Change submit element type to button because input type causing refresh before this line loads
     event.preventDefault();
@@ -39,6 +49,13 @@ function validateForm() {
         formEmailInput.style.border = '1px solid red';
         formHasNoErrors = false;
     }
+    // #form-email-input input validation
+    if (!studentNumberInput.value) {
+        // TODO: improve email validation
+        studentNumberInput.style.border = '1px solid red';
+        formHasNoErrors = false;
+    }
+    
 
     if (formHasNoErrors) {
         toggleLoader()
@@ -55,16 +72,18 @@ function pushUserDetailsToServer() {
         userLastName: formLastNameInput.value,
         userEmail: formEmailInput.value,
         userRole: formUserRoleSelect.options[formUserRoleSelect.selectedIndex].text,
+        userStudentNumber: studentNumberInput.value
     })
     .then(function(docRef) {
-        console.log("Document written with ID: ", docRef.id);
-        alert("Document written with");
+        // console.log("Document written with ID: ", docRef.id);
+        alert("User Created");
+        document.querySelector('.add-user-form').reset();
         toggleLoader();
         // Todo: inform user job is done and maybe clear form
     })
     .catch(function(error) {
-        console.error("Error adding document: ", error);
-        alert("Error adding document: ");
+        toggleLoader();
+        alert("Could not create User. Please Try Again.");
         // Todo: catch error and maybe allow user to try and send again
     });
 

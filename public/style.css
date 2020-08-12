@@ -20,6 +20,7 @@ textarea {
 button {
     background: #08355a;
     color: white;
+    outline-color: rgb(95, 188, 241);
     font-family: 'Exo 2', sans-serif !important;
     font-size: .85rem;
     /* font-weight: bold; */

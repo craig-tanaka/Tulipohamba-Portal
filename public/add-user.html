@@ -122,6 +122,17 @@
                 <label class="form-label">Student Number:</label>
                 <input placeholder="Student Number" type="text" id="form-student-number-input" class="form-input">
               </div>
+              <div class="form-row student-course-row">
+                <label class="form-label">Student Course:</label>
+                <select id="form-usercourse-select" class="form-select">
+                  <option value="BLS">Basic Life Support</option>
+                  <option value="DSA">Dental Surgery Assistance</option>
+                  <option value="CHE">Community Health Education</option>
+                  <option value="COU">Counselling</option>
+                  <option value="HSM">Healthcare Service Management</option>
+                  <option value="OHS">Occupational Health and Safety</option>
+                </select>
+              </div>
 
             </fieldset>
 
@@ -132,10 +143,30 @@
             </div>
 
             <div class="form-row">
-              <div class="loader-container" style="display: none;">
+              <div class="loader-container">
                 <div class="lds-hourglass">
                 </div>
+                <div class="loader-log"></div>
                 <style>
+                  .loader-container {
+                    display: none;
+                    position: relative;
+                    height: calc(64px + 1rem);
+                    width: 100%;
+                    margin: 0 auto;
+                    margin-top: 15rem;
+                    margin-bottom: 1rem;
+                  }
+
+                  .loader-log {
+                    margin-top: 70px;
+                    position: absolute;
+                    width: 100%;
+                    /* margin-left: -100px; */
+                    text-align: center;
+                    font-size: .9rem;
+                  }
+
                   .lds-hourglass {
                     /* overflow: hidden; */
                     display: inline-block;
@@ -148,7 +179,7 @@
                     margin-left: -32px;
                     margin-top: -32px;
                   }
-              
+
                   .lds-hourglass:after {
                     content: " ";
                     display: block;
@@ -161,18 +192,18 @@
                     border-color: rgb(134, 127, 127) transparent rgb(109, 106, 106) transparent;
                     animation: lds-hourglass 1.2s infinite;
                   }
-              
+
                   @keyframes lds-hourglass {
                     0% {
                       transform: rotate(0);
                       animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
                     }
-              
+
                     50% {
                       transform: rotate(900deg);
                       animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
                     }
-              
+
                     100% {
                       transform: rotate(1800deg);
                     }

@@ -9,16 +9,20 @@ const formSubmitRow = document.querySelector('#form-submit-row');
 const formLoaderContainer = document.querySelector('.loader-container');
 const formFieldsets = document.querySelectorAll('.add-user-form fieldset');
 const studentNumberInput = document.querySelector('#form-student-number-input');
+const studentCourseInput = document.querySelector('#form-usercourse-select');
 
 let loaderVisible = false;
 
 formUserRoleSelect.addEventListener('change', event => {
     const studentNumberRow = document.querySelector('.student-number-row');
+    const studentCourseRow = document.querySelector('.student-course-row');
     let role = formUserRoleSelect.value;
     if (role === 'Student') {
         studentNumberRow.style.display = 'flex';
+        studentCourseRow.style.display = 'flex';
     } else {
         studentNumberRow.style.display = 'none';
+        studentCourseRow.style.display = 'none';
     }
 })
 formSubmitBtn.addEventListener('click', (event) => {
@@ -58,6 +62,7 @@ function validateForm() {
     
 
     if (formHasNoErrors) {
+        loaderLog('Creating User.')
         toggleLoader()
         pushUserDetailsToServer()
     }else {
@@ -66,14 +71,27 @@ function validateForm() {
 }
 
 function pushUserDetailsToServer() {
-    db.collection("users").add({
-        userFirstName: formFirstNameInput.value,
-        userMiddleNames: formMiddleNames.value,
-        userLastName: formLastNameInput.value,
-        userEmail: formEmailInput.value,
-        userRole: formUserRoleSelect.options[formUserRoleSelect.selectedIndex].text,
-        userStudentNumber: studentNumberInput.value
-    })
+    let doc = {};
+    if (formUserRoleSelect.value !== 'Student') {
+        doc = {
+            userFirstName: formFirstNameInput.value,
+            userMiddleNames: formMiddleNames.value,
+            userLastName: formLastNameInput.value,
+            userEmail: formEmailInput.value,
+            userRole: formUserRoleSelect.value
+        }
+    } else {
+        doc = {
+            userFirstName: formFirstNameInput.value,
+            userMiddleNames: formMiddleNames.value,
+            userLastName: formLastNameInput.value,
+            userEmail: formEmailInput.value,
+            userRole: formUserRoleSelect.value,
+            studentNumber: studentNumberInput.value,
+            studentCourse: studentCourseInput.value
+        }
+    }
+    db.collection("users").add(doc)
     .then(function(docRef) {
         // console.log("Document written with ID: ", docRef.id);
         alert("User Created");
@@ -108,5 +126,8 @@ function toggleLoader() {
 
         loaderVisible = true;
     }
+}
+function loaderLog(msg) {
+    document.querySelector('.loader-log').innerHTML = msg;
 }
 // TODO: Change user password and offer a better default password

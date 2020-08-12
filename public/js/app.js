@@ -5,6 +5,7 @@ const sidebar = document.querySelector('section.sidebar');
 const sidebarOverlay = document.querySelector('section.sidebar-overlay');
 const sidebarToggleBtn = document.querySelector('.sidebar-toggle-btn');
 const sidebarBackBtn = document.querySelector('.sidebar-back-btn');
+const logoutBtn = document.querySelector('.content-header-logout-btn')
 
 
 // Get User Account from firebase Auth
@@ -31,6 +32,14 @@ sidebarOverlay.addEventListener('click', (event) => {
 sidebarBackBtn.addEventListener('click', (event) => {
     sidebar.classList.remove('active');
     sidebarOverlay.classList.remove('active');
+})
+logoutBtn.addEventListener('click', event => {
+    firebase.auth().signOut().then(function () {
+        // Sign-out successful.
+        window.location.href = '../index.html';
+    }).catch(function (error) {
+        alert('Could not Logout. Please try again.')
+    });
 })
 // #endregion _____________________EVENT LISTENERS_______________________
 

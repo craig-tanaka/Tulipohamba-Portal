@@ -45,7 +45,7 @@ function updateLastNameInput() {
     lastNameInput.addEventListener('input', addNewRow);
 }
 function submitResults() {
-
+    loaderLog('Submitting Results');
     showLoader();
     let numberOfStudents = 0;
     let studentRows = document.querySelectorAll('.results-table tbody tr');

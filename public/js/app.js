@@ -84,6 +84,7 @@ function addUserSidebarLinks(user) {
                             <img src="./img/results-vector.png" class="sidebar-link-img">
                             <a href="../examination-timetable.html">Examination Timetable</a>
                         </div>`
+        // Todo: verify all sidebar links
         
     }
 
